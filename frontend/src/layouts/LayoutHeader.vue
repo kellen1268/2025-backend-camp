@@ -3,19 +3,13 @@
     <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
       <div class="flex justify-between items-center h-20 relative">
         <h1 class="text-xl md:text-2xl font-bold text-primary-0">
-          <router-link
-            to="/"
-            @click="closeMobileMenu"
-            class="flex items-center"
-          >
-            <img src="/logo-text.png" alt="LiveFit+" class="h-6 w-auto" />
+          <router-link to="/" @click="closeMobileMenu" class="flex items-center">
+            <img src="/logo-text-v2.png" alt="LiveFit+" class="h-6 w-auto" />
             <span class="sr-only">LiveFit+</span>
           </router-link>
         </h1>
 
-        <nav
-          class="hidden md:flex md:absolute md:left-1/2 md:transform md:-translate-x-1/2"
-        >
+        <nav class="hidden md:flex md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
           <ul class="flex gap-6">
             <li>
               <router-link
@@ -43,9 +37,7 @@
             class="bg-secondary-800 hover:bg-secondary-700 text-primary-900 font-medium text-base leading-[150%] px-5 py-3 rounded transition-colors h-12 flex items-center justify-center"
             >立即加入</router-link
           >
-          <p v-if="name" class="font-bold text-primary-0">
-            歡迎，{{ name }}您好！
-          </p>
+          <p v-if="name" class="font-bold text-primary-0">歡迎，{{ name }}您好！</p>
           <router-link
             v-if="role === 'USER'"
             to="/user/dashboard"
@@ -89,12 +81,7 @@
           class="md:hidden p-2 text-primary-300 hover:text-primary-0 focus:outline-none focus:ring-2 focus:ring-primary-600 rounded-lg"
           aria-label="Toggle menu"
         >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               v-if="!isMobileMenuOpen"
               stroke-linecap="round"
@@ -181,7 +168,7 @@
             </li>
             <li v-if="name">
               <button
-                @click="closeMobileMenu(), logout()"
+                @click="(closeMobileMenu(), logout())"
                 class="inline-block py-2 text-neutral-300 hover:text-primary-0 transition-all font-medium text-base leading-[150%] w-full text-left"
               >
                 登出
