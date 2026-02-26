@@ -2,9 +2,9 @@ name: 初階任務驗證
 
 on:
   push:
-    branches: ['*']
+    branches: ["*"]
   pull_request:
-    branches: ['*']
+    branches: ["*"]
 
 jobs:
   validate-missions:
