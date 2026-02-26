@@ -77,7 +77,7 @@ jobs:
       - name: Task 7 - Check healthcheck response
         run: |
           echo "📋 題目 7：檢查健康檢查回傳格式"
-          if grep -A5 "app.get('/healthcheck'" backend/app.js | grep -q "res.status(200).json"; then
+          if grep -A5 "app.get("/healthcheck"" backend/app.js | grep -q "res.status(200).json"; then
             echo "✅ 通過：healthcheck 已改為 JSON 格式"
           else
             echo "❌ 失敗：請將 backend/app.js 中的 healthcheck 路由改為回傳 JSON 格式"
